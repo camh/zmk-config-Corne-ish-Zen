@@ -39,22 +39,22 @@
                 compatible = "zmk,keymap";
 
                 default_layer {
-                label = " ";
+                label = "";
 // -----------------------------------------------------------------------------------------
-// |  ESC |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  |  \  |
-// |  TAB |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '  |
-// |  RET |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  -  |  /  |
-//                    | GUI | SPC | COM |   | NUM | BKSP | MEH |
+// |  ESC |  Q  |  W  |  E  |  R  |  T  |   |  Y   |  U  |  I  |  O  |  P  |  \  |
+// |  TAB |  A  |  S  |  D  |  F  |  G  |   |  H   |  J  |  K  |  L  |  ;  |  '  |
+// |  RET |  Z  |  X  |  C  |  V  |  B  |   |  N   |  M  |  ,  |  .  |  -  |  /  |
+//                    | GUI | COM | SPC |   | BKSP | NUM | MEH |
                         bindings = <
-   &kp ESC     &kp Q      &kp W       &kp E      &kp R      &kp T     &kp Y     &kp U         &kp I          &kp O         &kp P         &kp BSLH
-   &kp TAB     &hm LSFT A &hm LCTRL S &hm LALT D &hm LGUI F &kp G     &kp H     &hm RGUI J    &hm RALT K     &hm LCTRL L   &hm LSFT SEMI &kp SQT
-   &hm MEH RET &lt SYM Z  &kp X       &kp C      &kp V      &kp B     &kp N     &kp M         &kp COMMA      &kp DOT       &lt SYM MINUS &hm MEH SLASH
-                                      &kp LCMD   &kp SPACE  &mo COM   &mo NUM   &kp BKSP      &kp MEH
+   &kp ESC     &kp Q      &kp W       &kp E      &kp R       &kp T       &kp Y     &kp U         &kp I          &kp O         &kp P          &kp BSLH
+   &kp TAB     &hm LSFT A &hm LCTRL S &hm LALT D &hm LGUI F  &lt NUM G   &kp H     &hm RGUI J    &hm RALT K     &hm LCTRL L   &hm LSFT SEMI  &kp SQT
+   &hm MEH RET &lt SYM Z  &kp X       &kp C      &kp V       &kp B       &kp N     &kp M         &kp COMMA      &kp DOT       &lt SYM MINUS  &hm MEH SLASH
+                                      &kp LCMD   &lt COM TAB &kp SPACE   &kp BKSP  &lt NUM RET   &kp MEH
                         >;
                 };
 
                 common_layer {
-                label = " ";
+                label = "";
 // -----------------------------------------------------------------------------------------
 // |      |     | BACK| FWD | PREV| NEXT|   | LFRG| LPAG|  UP | RPAG| RFRG| DEL  |
 // |      |     |     |     |     | REDO|   | PGUP| LFT | DWN | RGT |     | DELL |
@@ -68,7 +68,7 @@
                         >;
                 };
                 numbers_layer {
-                label = " ";
+                label = "";
 // -----------------------------------------------------------------------------------------
 // |      | F6  | F7  | F8  | F9  | F10 |   |  *  |  7  |  8  |  9  |  +  |  END CALL |
 // |      |     |     |     |     |RESET|   |  /  |  4  |  5  |  6  |  -  |  0        |
@@ -82,7 +82,7 @@
                         >;
                 };
                 symbols_layer {
-                label = " ";
+                label = "";
 // -----------------------------------------------------------------------------------------
 // |      |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  `  |  ~  |      |
 // |      |  …  |  [  |  ]  |  {  |  }  |   |  (  |  )  |  '  |  "  |  —  |      |
@@ -93,21 +93,6 @@
     &trans    &kp LA(SEMI) &kp LBKT  &kp RBKT  &kp LBRC  &kp RBRC    &kp LPAR  &kp RPAR  &kp SQT   &kp DQT   &kp LS(LA(MINUS))  &trans
     &trans    &trans       &kp BSLH  &kp PIPE  &kp UNDER &kp MINUS   &kp EQUAL &kp PLUS  &kp SLASH &kp QMARK &trans             &trans
                                      &trans    &trans    &trans      &trans    &trans    &trans
-                        >;
-                };
-
-                game_layer {
-                label = "GAME";
-// -----------------------------------------------------------------------------------------
-// |  ESC |     |     |     |     |     |   |  1  |  2  |  3  |  4  |  5  |   6  |
-// | LSFT |  A  |  S  |  D  |  F  |  G  |   |     |     |     |     |     |      |
-// |  RET |     |     |     |     |     |   |     |     |     |     |     |      |
-//                    |     |     |  L  |   |     |     |     |
-                        bindings = <
-    &kp ESC   &trans    &trans    &trans    &trans    &trans    &kp N1    &kp N2    &kp N3    &kp N4    &kp N5    &kp N6
-    &kp LSFT  &kp A     &kp S     &kp D     &kp F     &kp G     &trans    &trans    &trans    &trans    &trans    &trans
-    &kp RET   &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans
-                                  &kp L     &trans    &trans    &trans    &trans    &trans
                         >;
                 };
         };

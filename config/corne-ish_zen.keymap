@@ -1,6 +1,6 @@
 /*
 *
-* Copyright (c) 2021 Darryl deHaan
+* Copyright (c) 2021 Cam Hunt
 * SPDX-License-Identifier: MIT
 *
 */
@@ -19,11 +19,16 @@
 #define REDO LG(LS(Z))
 #define MEH LC(LS(LALT))
 
-#define PLAY C_PP
+#define PLAY C_PLAY
 #define NEXT C_NEXT
 #define PREV C_PREV
 #define VOL_DN C_VOL_DN
 #define VOL_UP C_VOL_UP
+
+#define NXTB F17 // next tab
+#define PVTB F16 // prev tab
+#define FWD LA(F17) // fowrard
+#define BCK LA(F16) // back
 
 #define END_CALL LC(LA(LG(END)))
 
@@ -71,13 +76,13 @@
 // --------------------------------------------------------------------------------
 // |      |     |     |     |     |     |   | LFRG| LPAG | UP  | RPAG| RFRG| DEL  |
 // |      |     |     |     |     |     |   | UNDO| LFT  | DWN | RGT |     | DELL |
-// |      |     |     |     |     |     |   | REDO|      |     |     |     |      |
+// |      |     |     |     |     |     |   | REDO| PVTB | NXTB| BCK | FWD |      |
 //                    |     |     |     |   |     |      |     |
 
             bindings = <
     &trans  &trans  &trans  &trans  &trans  &trans  &kp LC(LEFT)  &kp LA(LEFT)  &kp UP    &kp LA(RIGHT)  &kp LC(RIGHT)  &kp DEL
     &trans  &trans  &trans  &trans  &trans  &trans  &kp UNDO      &kp LEFT      &kp DOWN  &kp RIGHT      &trans         &kp LG(BKSP)
-    &trans  &trans  &trans  &trans  &trans  &trans  &kp REDO      &trans        &trans    &trans         &trans         &trans
+    &trans  &trans  &trans  &trans  &trans  &trans  &kp REDO      &kp PVTB      &kp NXTB  &kp BCK        &kp FWD        &trans
                             &trans  &trans  &trans  &trans        &trans        &trans
             >;
         };

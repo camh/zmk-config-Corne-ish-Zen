@@ -19,7 +19,7 @@
 #define REDO LG(LS(Z))
 #define MEH LC(LS(LALT))
 
-#define PLAY C_PLAY
+#define PLAY C_PP
 #define NEXT C_NEXT
 #define PREV C_PREV
 #define VOL_DN C_VOL_DN

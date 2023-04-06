@@ -18,7 +18,7 @@
 #define UMDO LG(Z)
 #define REDO LG(LS(Z))
 #define MEH LC(LS(LALT))
-
+
 #define PLAY C_PP
 #define NEXT C_NEXT
 #define PREV C_PREV
@@ -115,7 +115,7 @@
     &trans  &trans  &trans    &kp VOL_UP  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
     &trans  &trans  &kp PREV  &kp VOL_DN  &kp NEXT  &trans  &trans  &trans  &trans  &trans  &trans  &trans
     &trans  &trans  &trans    &kp PLAY    &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                                          &trans      &trans    &trans  &trans  &trans  &trans
+                              &trans      &trans    &trans  &trans  &trans  &trans
             >;
         };
 
@@ -154,22 +154,3 @@
         };
     };
 };
-
-
-/*        layer {
-*            label = "";
-*
-*// -----------------------------------------------------------------------------
-*// |     |     |     |     |     |     |   |     |     |     |     |     |     |
-*// |     |     |     |     |     |     |   |     |     |     |     |     |     |
-*// |     |     |     |     |     |     |   |     |     |     |     |     |     |
-*//                   |     |     |     |   |     |     |     |
-*
-*            bindings = <
-*    &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-*    &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-*    &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-*                            &trans  &trans  &trans  &trans  &trans  &trans
-*            >;
-*        };
-*/

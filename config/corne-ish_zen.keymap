@@ -30,8 +30,6 @@
 #define FWD LA(F17) // fowrard
 #define BCK LA(F16) // back
 
-#define END_CALL LC(LA(LG(END)))
-
 &mt {
     tapping_term_ms = <211>;
 };
@@ -59,8 +57,8 @@
 // |  ESC |  Q  |  W  |  E  |  R  |  T  |   |  Y   |  U  |  I  |  O  |  P  |  \  |
 // |  TAB |  A  |  S  |  D  |  F  |  G  |   |  H   |  J  |  K  |  L  |  ;  |  '  |
 // |  RET |  Z  |  X  |  C  |  V  |  B  |   |  N   |  M  |  ,  |  .  |  -  |  /  |
-//                    | GUI | RET | SPC |   | BKSP | ESC | TAB |
-//                    |     | NAV | NUM |   | MED  | FUN | MEH |
+//                    | GUI |     | SPC |   | BKSP |     | TAB |
+//                    |     | NAV |     |   | MED  | NUM | FUN |
 
             bindings = <
    &kp ESC      &kp Q       &kp W        &kp E       &kp R        &kp T          &kp Y         &kp U       &kp I        &kp O        &kp P          &kp BSLH
@@ -108,39 +106,39 @@
             label = "";
 
 // --------------------------------------------------------------------------------------
-// | BTCLR | BT2 |      |  VOL_UP  |      |     |   |     |     |     |     |     |     |
-// |  BT0  | BT3 | PREV |  VOL_DN  | NEXT |     |   |     |     |     |     |     |     |
-// |  BT1  | BT4 |      |   PLAY   |      |     |   |     |     |     |     |     |     |
-//                      |          |      |     |   |     |     |     |
+// |    |     |      |  VOL_UP  |      |     |   |     |     |     |     |     |     |
+// |    |     | PREV |  VOL_DN  | NEXT |     |   |     |     |     |     |     |     |
+// |    |     |      |   PLAY   |      |     |   |     |     |     |     |     |     |
+//                   |          |      |     |   |     |     |     |
 
             bindings = <
-    &bt BT_CLR    &bt BT_SEL 2  &trans    &kp VOL_UP  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-    &bt BT_SEL 0  &bt BT_SEL 3  &kp PREV  &kp VOL_DN  &kp NEXT  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-    &bt BT_SEL 1  &bt BT_SEL 4  &trans    &kp PLAY    &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+    &trans  &trans  &trans    &kp VOL_UP  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+    &trans  &trans  &kp PREV  &kp VOL_DN  &kp NEXT  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+    &trans  &trans  &trans    &kp PLAY    &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
                                           &trans      &trans    &trans  &trans  &trans  &trans
             >;
         };
 
         fun_layer {
             label = "";
-                
+
 // -----------------------------------------------------------------------------
-// |     | F11 | F12 | F13 | F14 | F15 |   |     |     |     |     |     |     |
-// |     |  F6 |  F7 |  F8 |  F9 | F10 |   |     |     |     |     |     |     |
-// |     |  F1 |  F2 |  F3 |  F4 |  F5 |   |     |     |     |     |     |     |
-//                   |     |     |     |   |     |     |     |
+// | BTCLR | F11 | F12 | F13 | F14 | F15 |   |     |     |     |     |     |     |
+// |  BT1  |  F6 |  F7 |  F8 |  F9 | F10 |   |     |     |     |     |     |     |
+// |  BT2  |  F1 |  F2 |  F3 |  F4 |  F5 |   |     |     |     |     |     |     |
+//                     |     |     |     |   |     |     |     |
 
             bindings = <
-    &trans  &kp F11  &kp F12  &kp F13  &kp F14  &kp F15  &trans  &trans  &trans  &trans  &trans  &trans
-    &trans  &kp F6   &kp F7   &kp F8   &kp F9   &kp F10  &trans  &trans  &trans  &trans  &trans  &trans
-    &trans  &kp F1   &kp F2   &kp F3   &kp F4   &kp F5   &trans  &trans  &trans  &trans  &trans  &trans
-                              &trans   &trans   &trans   &trans  &trans  &trans
+    &bt BT_CLR     &kp F11  &kp F12  &kp F13  &kp F14  &kp F15  &trans  &trans  &trans  &trans  &trans  &trans
+    &bt BT_SEL 0   &kp F6   &kp F7   &kp F8   &kp F9   &kp F10  &trans  &trans  &trans  &trans  &trans  &trans
+    &bt BT_SEL 1   &kp F1   &kp F2   &kp F3   &kp F4   &kp F5   &trans  &trans  &trans  &trans  &trans  &trans
+                                     &trans   &trans   &trans   &trans  &trans  &trans
             >;
         };
 
         symbols_layer {
             label = "";
-                
+
 // -------------------------------------------------------------------------------
 // |      |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  `  |  ~  |      |
 // |      |  …  |  [  |  ]  |  {  |  }  |   |  (  |  )  |  '  |  "  |  —  |      |
@@ -154,23 +152,24 @@
                                     &trans    &trans     &trans     &trans     &trans    &trans
             >;
         };
-
-
-        layer {
-            label = "";
-                
-// -----------------------------------------------------------------------------
-// |     |     |     |     |     |     |   |     |     |     |     |     |     |
-// |     |     |     |     |     |     |   |     |     |     |     |     |     |
-// |     |     |     |     |     |     |   |     |     |     |     |     |     |
-//                   |     |     |     |   |     |     |     |
-
-            bindings = <
-    &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-    &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-    &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                            &trans  &trans  &trans  &trans  &trans  &trans
-            >;
-        };
     };
 };
+
+
+/*        layer {
+*            label = "";
+*
+*// -----------------------------------------------------------------------------
+*// |     |     |     |     |     |     |   |     |     |     |     |     |     |
+*// |     |     |     |     |     |     |   |     |     |     |     |     |     |
+*// |     |     |     |     |     |     |   |     |     |     |     |     |     |
+*//                   |     |     |     |   |     |     |     |
+*
+*            bindings = <
+*    &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+*    &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+*    &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+*                            &trans  &trans  &trans  &trans  &trans  &trans
+*            >;
+*        };
+*/

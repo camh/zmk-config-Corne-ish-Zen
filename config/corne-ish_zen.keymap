@@ -58,13 +58,13 @@
 // |  TAB |  A  |  S  |  D  |  F  |  G  |   |  H   |  J  |  K  |  L  |  ;  |  '  |
 // |  RET |  Z  |  X  |  C  |  V  |  B  |   |  N   |  M  |  ,  |  .  |  -  |  /  |
 //                    | GUI |     | SPC |   | BKSP |     | TAB |
-//                    |     | NAV |     |   | MED  | NUM | FUN |
+//                    |     | NAV |     |   |      | NUM | FUN |
 
             bindings = <
-   &kp ESC      &kp Q       &kp W        &kp E       &kp R        &kp T          &kp Y         &kp U       &kp I        &kp O        &kp P          &kp BSLH
-   &kp TAB      &hm LSFT A  &hm LCTRL S  &hm LALT D  &hm LGUI F   &lt NUM G      &kp H         &hm RGUI J  &hm RALT K   &hm LCTRL L  &hm LSFT SEMI  &kp SQT
-   &hm MEH RET  &lt SYM Z   &kp X        &kp C       &kp V        &kp B          &kp N         &kp M       &kp COMMA    &kp DOT      &lt SYM MINUS  &hm MEH SLASH
-                                         &kp LCMD    &mo NAV      &kp SPACE      &lt MED BKSP  &mo NUM     &lt FUN TAB
+   &kp ESC      &kp Q       &kp W        &kp E       &kp R        &kp T          &kp Y      &kp U       &kp I        &kp O        &kp P          &kp BSLH
+   &kp TAB      &hm LSFT A  &hm LCTRL S  &hm LALT D  &hm LGUI F   &lt NUM G      &kp H      &hm RGUI J  &hm RALT K   &hm LCTRL L  &hm LSFT SEMI  &kp SQT
+   &hm MEH RET  &lt SYM Z   &kp X        &kp C       &kp V        &kp B          &kp N      &kp M       &kp COMMA    &kp DOT      &lt SYM MINUS  &hm MEH SLASH
+                                         &kp LCMD    &mo NAV      &kp SPACE      &kp BKSP   &mo NUM     &lt FUN TAB
             >;
         };
 
@@ -72,16 +72,16 @@
             label = "";
 
 // --------------------------------------------------------------------------------
-// |      |     |     |     |     |     |   | LFRG| LPAG | UP  | RPAG| RFRG| DEL  |
-// |      |     |     |     |     |     |   | PGUP| LFT  | DWN | RGT |     | DELL |
-// |      |     |     |     |     |     |   | PGDN| PVTB | NXTB| BCK | FWD |      |
-//                    |     |     |     |   |     |      |     |
+// |      |     |      | VOL_UP |      |      |   | LFRG| LPAG | UP  | RPAG| RFRG| DEL  |
+// |      |     | PREV | VOL_DN | NEXT | REDO |   | PGUP| LFT  | DWN | RGT |     | DELL |
+// |      |     |      |  PLAY  |      | UNDO |   | PGDN|      |     |     |     |      |
+//                     |        |      |      |   |     |      |     |
 
             bindings = <
-    &trans  &trans  &trans  &trans  &trans  &trans    &kp LC(LEFT)  &kp LA(LEFT)  &kp UP    &kp LA(RIGHT)  &kp LC(RIGHT)  &kp DEL
-    &trans  &trans  &trans  &trans  &trans  &kp REDO  &kp PG_UP     &kp LEFT      &kp DOWN  &kp RIGHT      &trans         &kp LG(BKSP)
-    &trans  &trans  &trans  &trans  &trans  &kp UMDO  &kp PG_DN     &kp PVTB      &kp NXTB  &kp BCK        &kp FWD        &trans
-                            &trans  &trans  &trans    &trans        &trans        &trans
+    &trans  &trans  &trans    &kp VOL_UP  &trans    &trans    &kp LC(LEFT)  &kp LA(LEFT)  &kp UP    &kp LA(RIGHT)  &kp LC(RIGHT)  &kp DEL
+    &trans  &trans  &kp PREV  &kp VOL_DN  &kp NEXT  &kp REDO  &kp PG_UP     &kp LEFT      &kp DOWN  &kp RIGHT      &trans         &kp LG(BKSP)
+    &trans  &trans  &trans    &kp PLAY    &trans    &kp UMDO  &kp PG_DN     &trans        &trans    &trans         &trans        &trans
+                              &trans      &trans    &trans    &trans        &trans        &trans
             >;
         };
 
